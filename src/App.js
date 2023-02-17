@@ -26,7 +26,7 @@ function App() {
     }
     return true;
   }
-  console.log(files)
+  // console.log(files)
   return (
     <div className="App flex-parent">
       <div className='fileupload flex-child'>

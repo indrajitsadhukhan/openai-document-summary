@@ -1,0 +1,12 @@
+How to deploy React app on Github pages?
+1. Modify package.json file 
+  "homepage": "https://indrajitsadhukhan.github.io/openai-document-summary",
+and 
+    "scripts":{
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    }
+
+2. npm install gh-pages serve
+3. npm run deploy
+4. 
