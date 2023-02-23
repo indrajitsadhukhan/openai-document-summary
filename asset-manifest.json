@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/openai-document-summary/static/css/main.40596b5a.chunk.css",
-    "main.js": "/openai-document-summary/static/js/main.16da60aa.chunk.js",
-    "main.js.map": "/openai-document-summary/static/js/main.16da60aa.chunk.js.map",
+    "main.js": "/openai-document-summary/static/js/main.f1aed00c.chunk.js",
+    "main.js.map": "/openai-document-summary/static/js/main.f1aed00c.chunk.js.map",
     "runtime-main.js": "/openai-document-summary/static/js/runtime-main.4314ce79.js",
     "runtime-main.js.map": "/openai-document-summary/static/js/runtime-main.4314ce79.js.map",
     "static/js/2.5f04865d.chunk.js": "/openai-document-summary/static/js/2.5f04865d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4314ce79.js",
     "static/js/2.5f04865d.chunk.js",
     "static/css/main.40596b5a.chunk.css",
-    "static/js/main.16da60aa.chunk.js"
+    "static/js/main.f1aed00c.chunk.js"
   ]
 }
