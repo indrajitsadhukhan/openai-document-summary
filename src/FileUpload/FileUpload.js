@@ -8,7 +8,7 @@ async function openAI_API(content,task)
 {
     content+=task
     // TODO: Import baseURL of API from config file.
-    const response = await fetch('http://localhost:8080/', {
+    const response = await fetch('http://localhost:8080/completion', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ async function readFile(file,setSummary)
         return async function()
         {
             var content = reader.result;
-            let task = "Give a list of bullet points of the most important sentences"
+            let task = "What is India's current population and who is India's current President"
            setSummary(await openAI_API(content,task))
         }
     })(reader);

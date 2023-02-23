@@ -1,4 +1,4 @@
-How to deploy React app on Github pages?
+Q. How to deploy React app on Github pages?
 1. Modify package.json file 
   "homepage": "https://indrajitsadhukhan.github.io/openai-document-summary",
 and 
@@ -9,4 +9,48 @@ and
 
 2. npm install gh-pages serve
 3. npm run deploy
-4. 
+
+Q. OpenAI Apis - docs
+
+1. Create completion - POST https://api.openai.com/v1/completions
+Creates a completion for the provided prompt and parameters
+Example - Summarize the given text, Answer the questions from the given text, 
+
+2. Edit - POST https://api.openai.com/v1/edits
+Creates a new edit for the provided input, instruction, and parameters.
+Example - Spelling mistakes, Change the tone of the text(polite,formal,etc..)
+
+3. Create image - POST https://api.openai.com/v1/images/generations
+Creates an image given a prompt.
+Example - sun in pacific ocean, diwali celebration in india
+
+4. Create image edit - POST https://api.openai.com/v1/images/edits
+Creates an edited or extended image given an original image and a prompt.
+Example - Upload an image and prompt the required changes to generate a new image
+
+
+5. Create image variation - POST https://api.openai.com/v1/images/variations
+Creates a variation of a given image.
+Example - Upload an image and it returns (n number of) variations of that image.
+
+6. Embedding
+
+7. Files
+(list files, upload file, delete file, retrieve file)
+
+8. Fine-tunes
+POST https://api.openai.com/v1/fine-tunes
+
+Create fine-tune using training file
+List fine-tunes, Retrieve fine-tune, Cancel fine-tune
+
+9. 
+
+
+
+
+
+
+
+
+Q. Learning github
