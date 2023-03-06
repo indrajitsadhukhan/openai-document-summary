@@ -1,0 +1,61 @@
+.file-card {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #eaebff;
+    background-color: #f0f1fb;
+    min-width: 360px;
+    min-height: 200px;
+
+    .file-inputs {
+        position: relative;
+        // Hide conventional input button by making opacity 0 and z-index=2 to keep it on top
+        input {
+            position: relative;
+            text-align: right;
+            opacity: 0;
+            z-index: 2;
+            cursor: pointer;
+            height: 40px;
+            max-width: 180px;
+        }
+        margin-bottom: 1.5em;
+        button {
+            font-weight: bold;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #fff;
+            background-color: #3a63e8;
+            font-size: 1.1rem;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            transition: background-color 0.6s;
+        }
+
+        &:hover {
+            button {
+                background-color: #5386f6;
+            }
+        }
+    }
+}
+
+.main {
+    margin-bottom: 0.4em;
+}
+
+.info {
+    font-size: 0.9rem;
+}

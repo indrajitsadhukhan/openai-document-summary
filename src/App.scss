@@ -1,0 +1,22 @@
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+.flex-parent {
+  display: flex;
+}
+.flex-child {
+  flex: 1;
+}
+.right-comp{
+  margin-left: 50px;
+}
+.description{
+  font-size: 1.4rem;
+  text-align: center;
+}
+.text-response{
+  margin-top: 20px;
+  padding: 30px;
+}
