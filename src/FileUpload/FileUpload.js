@@ -18,8 +18,6 @@ async function readFile(file,setContent)
         {
             var content = reader.result;
             setContent(content)
-        //     let task = "Mention some salient points from this article"
-        //    setSummary(await openAI_API(content,task))
         }
     })(reader);
 
@@ -27,6 +25,7 @@ async function readFile(file,setContent)
 }
 // At this point of time the application works only for .txt files 
 const FileUpload = ({ files, setFiles, removeFile ,doesExist,setContent}) => {
+
     const uploadHandler = async (event) => {
         const file = event.target.files[0];
         
@@ -34,6 +33,7 @@ const FileUpload = ({ files, setFiles, removeFile ,doesExist,setContent}) => {
         if(!file) return;
         file.isUploading = true;
         await readFile(file,setContent)
+
         setFiles([...files, file])
         // Fill up form data to store the file and file name
         const formData = new FormData();

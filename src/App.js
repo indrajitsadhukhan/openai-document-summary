@@ -18,7 +18,7 @@ function App() {
   const [question,setQuestion]=useState("")
   const [newText,setNewText]=useState("")
 
-  
+
   // Function which removes file from UI
   const removeFile = (filename) => {
     setFiles(files.filter(file=>file.name!==filename))
