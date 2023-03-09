@@ -5,7 +5,6 @@ import Form from 'react-bootstrap/Form';
 import { API_URL } from '../constants'
 import './QuestionComp.scss'
 
-
 const QuestionComp = ({setQuestion,question,content,setOutputText}) => {  
     const [text,setText]=useState("")  
     async function openAI_API(content,task)
