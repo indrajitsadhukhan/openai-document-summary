@@ -5,18 +5,22 @@ import Form from 'react-bootstrap/Form';
 import { API_URL } from '../constants'
 import './QuestionComp.scss'
 
-const QuestionComp = ({setQuestion,question,content,setOutputText}) => {  
+const QuestionComp = ({setQuestion,question,content,setOutputText,fileType}) => {  
     const [text,setText]=useState("")  
     async function openAI_API(content,task)
   {
       // TODO: Import baseURL of API from config file.
+      var prompt = content + task
+      prompt = prompt.replace('\n', "")
+
+      console.log(prompt)
       const response = await fetch(API_URL+'/completion', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-              prompt: task
+              prompt: prompt
           })
       })
       if(response.ok){

@@ -3,13 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faPlusCircle, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 import './FileUpload.scss'
 import axios from 'axios'
-import * as dotenv from 'dotenv'
 import { API_URL } from '../constants'
+import pdf from 'pdf-parse';
 
-dotenv.config()
-
-
-async function readFile(file,setContent)
+async function readFile_txt(file,setContent)
 {
     var reader = new FileReader();
     reader.onload = (function(reader)
@@ -23,16 +20,41 @@ async function readFile(file,setContent)
 
     reader.readAsText(file);
 }
+
+async function readFile_pdf(file,setContent)
+{
+    pdf(file).then(function(data) {
+        console.log(data.text)
+        setContent(data.text)
+    })
+}
+
+
+
 // At this point of time the application works only for .txt files 
-const FileUpload = ({ files, setFiles, removeFile ,doesExist,setContent}) => {
+const FileUpload = ({ files, setFiles, removeFile ,doesExist,setContent,setFileType}) => {
 
     const uploadHandler = async (event) => {
         const file = event.target.files[0];
-        
+     
         if(doesExist(file.name)==false) return;
         if(!file) return;
+
+        // Extract file type from given filename
+        var filetype=""
+        filetype=file.name.split('.').pop().toLowerCase()
+
+        setFileType(filetype)
+        console.log(filetype)
+
         file.isUploading = true;
-        await readFile(file,setContent)
+        // Read TXT files
+        if(filetype==="txt")
+        await readFile_txt(file,setContent)
+    
+        // Read PDF Files
+        if(filetype==="pdf")
+        await readFile_pdf(file,setContent)
 
         setFiles([...files, file])
         // Fill up form data to store the file and file name
@@ -59,13 +81,13 @@ const FileUpload = ({ files, setFiles, removeFile ,doesExist,setContent}) => {
             <div className="file-card">
 
                 <div className="file-inputs">
-                    <input type="file" onChange={uploadHandler} />
+                    <input type="file" accept=".txt,.pdf" onChange={uploadHandler} />
                     <button>
                         Upload
                     </button>
                 </div>
 
-                <p className="main">Upload .txt file</p>
+                <p className="main">Upload .txt,.pdf file</p>
                 <p className="info">Get brief summary of the document</p>
 
             </div>

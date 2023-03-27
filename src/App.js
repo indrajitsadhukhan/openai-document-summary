@@ -17,6 +17,7 @@ function App() {
   const [content,setContent]=useState("")
   const [question,setQuestion]=useState("")
   const [newText,setNewText]=useState("")
+  const [fileType,setFileType]=useState("")
 
 
   // Function which removes file from UI
@@ -39,12 +40,12 @@ function App() {
   return (
     <div className="App flex-parent">
       <div className='fileupload flex-child'>
-    <FileUpload files={files} setFiles={setFiles} 
-      removeFile={removeFile} doesExist={doesExist} setContent={setContent}/>
+    <FileUpload files={files} setFiles={setFiles}  removeFile={removeFile} doesExist={doesExist} setContent={setContent} setFileType={setFileType}/>
+
     <FileList files={files} removeFile={removeFile} />
     
     <div className='question'>
-    <QuestionComp setQuestion={setQuestion} question={question} content={content} setOutputText={setOutputText}/>
+    <QuestionComp setQuestion={setQuestion} question={question} content={content}  setOutputText={setOutputText} fileType={fileType}/>
     </div>
     </div>
 
