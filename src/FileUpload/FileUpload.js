@@ -87,7 +87,7 @@ const FileUpload = ({ files, setFiles, removeFile ,doesExist,setContent,setFileT
                     </button>
                 </div>
 
-                <p className="main">Upload .txt,.pdf file</p>
+                <p className="main">Upload .txt,.pdf files</p>
                 <p className="info">Get brief summary of the document</p>
 
             </div>
