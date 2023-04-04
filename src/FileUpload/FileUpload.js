@@ -6,6 +6,11 @@ import axios from 'axios'
 import { API_URL } from '../constants'
 import pdf from 'pdf-parse';
 
+
+
+const fs = require("fs")
+const pdfparser = require("pdf-parse")
+
 async function readFile_txt(file,setContent)
 {
     var reader = new FileReader();
@@ -23,10 +28,16 @@ async function readFile_txt(file,setContent)
 
 async function readFile_pdf(file,setContent)
 {
-    pdf(file).then(function(data) {
-        console.log(data.text)
-        setContent(data.text)
-    })
+ 
+        const pdffile = fs.readFileSync(file)
+        pdfparser(pdffile).then(data => {
+  
+    console.log(data.text)
+    setContent(data.text)
+}).catch(err => {
+    console.log(err)
+})
+
 }
 
 
