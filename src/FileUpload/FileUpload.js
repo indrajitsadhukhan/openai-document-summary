@@ -29,14 +29,23 @@ async function readFile_txt(file,setContent)
 async function readFile_pdf(file,setContent)
 {
  
-        const pdffile = fs.readFileSync(file)
-        pdfparser(pdffile).then(data => {
-  
-    console.log(data.text)
-    setContent(data.text)
-}).catch(err => {
-    console.log(err)
-})
+    let parsedPDF = ""
+    let pdfBuffer = null
+    try {
+        if (fs.existsSync(file)) {
+            pdfBuffer = fs.readFileSync(file)     
+            parsedPDF = await pdfparser(pdfBuffer)
+            }
+            if (parsedPDF) {
+                var content = parsedPDF.text;
+                setContent(content)
+            }
+        
+    } catch (error) {
+        console.error(error);
+       setContent("error reading file");
+    }
+
 
 }
 
