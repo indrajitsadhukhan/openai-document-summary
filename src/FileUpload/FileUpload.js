@@ -29,17 +29,19 @@ async function readFile_txt(file,setContent)
 async function readFile_pdf(file,setContent)
 {
  
-    let parsedPDF = ""
+    
     let pdfBuffer = null
     try {
         if (fs.existsSync(file)) {
             pdfBuffer = fs.readFileSync(file)     
-            parsedPDF = await pdfparser(pdfBuffer)
-            }
-            if (parsedPDF) {
-                var content = parsedPDF.text;
+            pdfparser(pdfBuffer).then(function(data){
+                console.log(data.text);
+                
+            
+                var content = pdfparser.text;
                 setContent(content)
-            }
+            })
+        }
         
     } catch (error) {
         console.error(error);
