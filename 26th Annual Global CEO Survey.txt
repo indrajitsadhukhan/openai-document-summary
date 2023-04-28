@@ -10,6 +10,7 @@ CEOs and 29% of global CEOs expect economic growth to improve in their countries
 regions over the next 12 months.
 26th Annual Global CEO Survey: India perspective 13
 CEOs in many major economies are optimistic about the growth prospects of their
+<<<<<<< HEAD
 Relocating physical assets
 Relocating our workforce
 Diversifying our product/service offering
@@ -132,3 +133,42 @@ corporate resource allocation decisions. The CEOs need to:
 .invest in upskilling as a lever to address talent shortage and provide training as required
 .invest in technology to reinvent the business
 .speed up investment in alternative energy sources and decarbonising.
+=======
+countries
+India Brazil China US Japan Canada Italy France Germany UK
+More optimistic about territory growth More optimistic about global growth
+Decline in global growth Decline in territory growth
+The responses of India CEOs mark a dramatic shift from the mood in 2021, when 99% said
+India’s economic growth would improve over the next 12 months. The reasons are not far to
+seek. When the 25th Annual Global CEO Survey was being conducted in October–November
+2021, it seemed the worst of the pandemic was over. But within weeks of fieldwork closing,
+news of the highly transmissible Omicron variant of SARS-CoV-2 broke out. When the
+present survey was conducted in 2022, the world was already reeling under the impact of the
+conflict in Europe and other macroeconomic issues.
+India Asia Pacific Global
+
+57% of India CEOs are optimistic about India’s economic growth over the next 12 months.
+26th Annual Global CEO Survey: India perspective 14
+The next steps
+While it may be good to err on the side of caution, it is important that CEOs stay optimistic
+about the future. What is needed then is:
+.an approach to combat bias in the boardroom by soliciting views through independent
+consultation or questionnaires
+.discussions that are structured to consider overlooked possibilities
+.assigning a devil’s advocate role for critical discussions.
+How do your resilience and workforce strategies fit together?
+The survey makes it clear that measures are being taken, or being planned, to meet the
+challenges of the future. Cost cuts are high on the priority list everywhere, with about 93% of
+India CEOs saying that they are cutting, have cut or are considering cutting operating costs
+and spurring revenue growth to mitigate economic challenges and volatility. About 85%,
+however, stress they will not reduce the size of their workforce, and 96% state they do not
+plan to reduce compensation – demonstrating their resolve to retain talent.
+Reducing operating costs and diversifying products/services are top priorities for
+
+26th Annual Global CEO Survey: India perspective 15
+Employee attrition is another issue that confronts CEOs. The survey shows that India CEOs
+are divided, with 32% saying attrition rates will continue to increase slightly, moderately and
+significantly, and 34% holding that there will be no change. But this may be a bigger concern
+than is now being felt.
+
+>>>>>>> c71123628b8b80db65b278f0a1025e4d23bd324d

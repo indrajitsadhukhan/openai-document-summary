@@ -5,6 +5,7 @@
  4. We have used OpenAI Apis to build it.
  5. Usecases of the application - Reading a policy document quickly, Understand important points from meeting minutes.
 
- Application Hosted on Github pages (Live application link)
- https://indrajitsadhukhan.github.io/openai-document-summary/
+ Application Hosted on Netlify
+ https://incomparable-syrniki-c39132.netlify.app/
+ 
  
