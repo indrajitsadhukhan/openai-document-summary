@@ -48,8 +48,8 @@ const FileUpload = ({ files, setFiles, removeFile ,doesExist,setContent,setFileT
         await readFile_txt(file,setContent)
     
         // Read PDF Files
-        if(filetype==="pdf")
-        await readFile_pdf(file,setContent)
+        // if(filetype==="pdf")
+        // await readFile_pdf(file,setContent)
 
         setFiles([...files, file])
         // Fill up form data to store the file and file name
