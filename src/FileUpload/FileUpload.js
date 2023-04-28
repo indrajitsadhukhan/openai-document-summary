@@ -4,12 +4,10 @@ import { faPlus, faPlusCircle, faPlusSquare } from '@fortawesome/free-solid-svg-
 import './FileUpload.scss'
 import axios from 'axios'
 import { API_URL } from '../constants'
-import pdf from 'pdf-parse';
 
 
 
 const fs = require("fs")
-const pdfparser = require("pdf-parse")
 
 async function readFile_txt(file,setContent)
 {
@@ -24,31 +22,6 @@ async function readFile_txt(file,setContent)
     })(reader);
 
     reader.readAsText(file);
-}
-
-async function readFile_pdf(file,setContent)
-{
- 
-    
-    let pdfBuffer = null
-    try {
-        if (fs.existsSync(file)) {
-            pdfBuffer = fs.readFileSync(file)     
-            pdfparser(pdfBuffer).then(function(data){
-                console.log(data.text);
-                
-            
-                var content = pdfparser.text;
-                setContent(content)
-            })
-        }
-        
-    } catch (error) {
-        console.error(error);
-       setContent("error reading file");
-    }
-
-
 }
 
 
