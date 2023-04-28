@@ -1,8 +1,5 @@
-import React, { Component,useState } from "react";
+import React, {useState } from "react";
 import Card from 'react-bootstrap/Card';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileAlt,faFilePdf, faSpinner, faTrash } from '@fortawesome/free-solid-svg-icons'
-import './TextResponse.scss'
 
 const TextResponse = ({outputText,newText,setNewText}) => {
   const [text,setText]=useState("")
